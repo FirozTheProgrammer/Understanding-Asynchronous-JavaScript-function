@@ -1,5 +1,3 @@
-# Understanding-Asynchronous-JavaScript-function
-
 📘 Understanding JavaScript Asynchronous Functions
 ===================================================
 
