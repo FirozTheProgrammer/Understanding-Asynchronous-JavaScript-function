@@ -1,4 +1,4 @@
-// call back function syntax
+// ===> call back function syntax <====
 
 // this function can displyed value of another function
 const disply = (result) => {
@@ -15,6 +15,18 @@ const calculator = (num1, num2, callback) => {
 
 calculator(5, 5, disply);
 
+// another call back function
+function fetchData(callback) {
+  setTimeout(() => {
+    const data = "Some data";
+    callback(data);
+  }, 1000);
+}
+
+fetchData((data) => {
+  console.log(data); // Outputs "Some data" after 1 second
+});
+
 // different way to call back function
 
 const calculator2 = (num1, num2, callback) => {
@@ -26,16 +38,4 @@ const calculator2 = (num1, num2, callback) => {
 
 calculator2(5, 5, (result) => {
   console.log(result);
-});
-
-// another call back function
-function fetchData(callback) {
-  setTimeout(() => {
-    const data = "Some data";
-    callback(data);
-  }, 1000);
-}
-
-fetchData((data) => {
-  console.log(data); // Outputs "Some data" after 1 second
 });
